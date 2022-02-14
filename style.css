@@ -1,5 +1,7 @@
 :root {
     --main-color: #3b82f6;
+    --main-color-hover: #60a5fa;
+    --background-color: #d1d5db;
     --red: #dc2626;
     --orange: #ea580c;
     --green: #16a34a;
@@ -14,7 +16,7 @@
 
 .container {
     display: grid;
-    grid: 2fr 8fr / 2fr 8fr;
+    grid: 1fr 8fr / 2fr 8fr;
     height: 100vh
 }
 
@@ -67,16 +69,77 @@
     grid-row: 1 / 2;
     display: grid;
     grid: 1fr 2fr / 1fr ;
+    margin: 10px;
+    row-gap: 15px;
+}
+
+.header-wrapper img {
+    width: 1.5rem;
 }
 
 .header-top {
     display: grid;
-    grid-template-columns: 1fr 5fr 1fr 1fr 1.5fr;
+    grid-template-columns: 0.5fr 5fr repeat(3, 0.5fr);
+    justify-items: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-top img:nth-child(4) {
+    width: 2.5rem;
+}
+
+.header-top input {
+    font-size: 1rem;
+    height: 2rem;
+    padding-left: 20px;
+    width: 90%;
+    justify-self: start;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--background-color);
 }
 
 .header-bottom {
     display: grid;
-    grid-template-columns: 1fr 4fr repeat(3, 1fr)
+    grid-template-columns: 0.5fr 4fr repeat(3, 0.75fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.header-bottom img {
+    width: 3.5rem;
+}
+
+.header-bottom span {
+    justify-self: start;
+}
+
+.header-bottom-text {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    gap: 5px;
+    font-size: 2rem;
+    padding-left: 10px;
+}
+
+.header-bottom-text span:first-child {
+    font-size: 1rem;
+}
+
+.header-bottom button {
+    border: none;
+    border-radius: 25px;
+    background-color: var(--main-color);
+    color: white;
+    height: 2.5rem;
+    font-size: 1.1rem;
+    width: 100px;
+}
+
+.header-bottom button:hover {
+    background-color: var(--main-color-hover);
 }
 
 .main-wrapper {
